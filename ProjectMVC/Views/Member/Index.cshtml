@@ -14,6 +14,7 @@
                 <th>序號</th>
                 <th>姓名</th>
                 <th>Mail</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,10 @@
                     <td>@obj.Id</td>
                     <td>@obj.Name</td>
                     <td>@obj.Mail</td>
+                        <td><div class="w-100 btn-group"><a asp-controller="Member" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-info border form-control">編輯</a>
+                                <a asp-controller="Member" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger border form-control">刪除</a>
+                            </div>
+                        </td>
                 </tr>
             }
         </tbody>
