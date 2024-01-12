@@ -11,7 +11,7 @@ using ProjectMVC.Data;
 namespace ProjectMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240112135059_SeedMemberTable")]
+    [Migration("20240112154705_SeedMemberTable")]
     partial class SeedMemberTable
     {
         /// <inheritdoc />
@@ -33,7 +33,6 @@ namespace ProjectMVC.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Mail")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

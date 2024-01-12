@@ -1,0 +1,33 @@
+﻿@model Member
+<h1>新增成員</h1>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <label asp-for="Id" class="p-0"></label>
+            <input asp-for="Id" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Name" class="p-0"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Mail" class="p-0"></label>
+            <input asp-for="Mail" class="form-control" />
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary border form-control" type="submit">新增</button>
+        </div>
+        <div class="col-md-6">
+            <a asp-controller="Member" asp-action="Index" class="btn btn-secondary border form-control">
+                返回
+            </a>
+        </div>
+    </div>
+</form>
+
+
